@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Info from "./components/Info";
+import Convertor from "./components/Convertor";
 
 function App() {
+  const [price, setprice] = useState("0");
+
+  const dataHandler = (e) => {
+    setprice(e);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card">
+        <div className="title">
+          <h2>CRYPTOCON</h2>
+        </div>
+        <Info onSelect={dataHandler} />
+        <Convertor items={price} />
+      </div>
     </div>
   );
 }

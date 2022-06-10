@@ -1,0 +1,17 @@
+.info_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.dropdown {
+  width: 180px;
+  text-align: center;
+}
+.title {
+  color:#388e3c;
+
+}
+ .dropdown option:hover {
+   background-color: #388e3c;
+ }

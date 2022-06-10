@@ -1,0 +1,69 @@
+.board {
+  display: flex;
+  height: 90px;
+  flex-direction: column;
+}
+
+.btn__switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  border-radius: 12px;
+}
+.input_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  border: solid 1px #75624C;
+  padding:  8px;
+
+
+}
+.input {
+  all:unset;
+  width: 100px;
+  text-align:center;
+  color: white;
+
+}
+.output {
+  width: 100px;
+  margin-left:20px;
+}
+.btn_convert {
+  all:unset;
+  height: 50px;
+  width: 50px;
+  margin: 0px;
+  color:#388e3c;
+  padding-left: 14px;
+  transition: all 0.1s ease;
+}
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #75624C;
+  padding:  8px;
+  color: white;
+  overflow: hidden;
+}
+
+.btn_convert:hover {
+  transform: scale(1.2);
+}
