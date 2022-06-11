@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import  { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import  { faArrowLeft,faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import './conb.css'
+import Tippy from "@tippyjs/react";
+import 'tippy.js/dist/tippy.css';
+
+
+
+
 const Convertor_b = props => {
   const [ans, setans] = useState("");
   const [input, setinput] = useState("");
-
   const textHandler = event => {
     setinput(event.target.value);
   };
@@ -26,8 +31,7 @@ const Convertor_b = props => {
       .then(response => response.json())
       .then(response => {
         let a = response.data.coins[props.coindata].price.slice(0, 8);
-        let b =  parseFloat(input / a);
-        b = b.toFixed(2)
+        let b = (input / a);
         setans(b);
       })
       .catch(err => console.error(err));
@@ -43,7 +47,7 @@ const Convertor_b = props => {
       <div className="dashboard">
       <div className="output">{ans}</div>
         <div>
-          <button onClick={clickhandler} className="btn_convert"><FontAwesomeIcon icon={faArrowLeft} size="2x"/></button>
+          <button onClick={clickhandler} className="btn_convert_b"><FontAwesomeIcon icon={faArrowLeft} size="2x"/></button>
         </div>
         <div className="input_field">
           <input
@@ -56,9 +60,11 @@ const Convertor_b = props => {
         </div>
       </div>
       <div className="btn__cancel">
+        <Tippy content="Clear">
         <button onClick={cancelhandler} className="btn_clear">
-          CLEAR
+          <FontAwesomeIcon icon={faTrashCan} size="2x"/>
         </button>
+        </Tippy>
       </div>
     </div>
   );

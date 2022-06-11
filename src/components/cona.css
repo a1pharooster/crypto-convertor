@@ -4,17 +4,26 @@
   flex-direction: column;
 }
 
-.btn__switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .btn__cancel {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+.btn_clear {
+  all:unset;
+  height: 50px;
+  width: 50px;
+  color:#388e3c;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  transition: all 0.1s ease;
+}
+
+.btn_clear:hover {
+  transform: scale(1.2);
 }
 
 .dashboard {
@@ -33,7 +42,10 @@
   padding:  8px;
 
 
-
+}
+.dolla {
+  color:white;
+  margin-left: 2px;
 }
 .input {
   all:unset;
@@ -46,14 +58,16 @@
   width: 100px;
   margin-right:20px;
 }
-.btn_convert {
+.btn_convert_a {
   all:unset;
   height: 50px;
   width: 50px;
   margin: 0px;
   color:#388e3c;
-  padding-left: 14px;
     transition: all 0.1s ease;
+    padding-right: 8px;
+    text-align: center;
+
 }
 .output {
   display: flex;
@@ -64,6 +78,6 @@
   color: white;
   overflow: hidden;
 }
-.btn_convert:hover {
+.btn_convert_a:hover {
   transform: scale(1.2);
 }

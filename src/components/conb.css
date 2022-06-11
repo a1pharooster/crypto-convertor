@@ -45,25 +45,28 @@
   width: 100px;
   margin-left:20px;
 }
-.btn_convert {
+.btn_convert_b {
   all:unset;
   height: 50px;
   width: 50px;
   margin: 0px;
   color:#388e3c;
-  padding-left: 14px;
   transition: all 0.1s ease;
+  text-align: center;
+  padding-left: 8px;
 }
 .output {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  width: 100px;
   border: solid 1px #75624C;
-  padding:  8px;
+  padding:  14px 8px 8px 8px;
   color: white;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  text-align: center;
 }
 
-.btn_convert:hover {
+.btn_convert_b:hover {
   transform: scale(1.2);
 }

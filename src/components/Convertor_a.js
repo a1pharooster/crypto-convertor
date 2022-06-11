@@ -1,7 +1,9 @@
 import React, { useState } from "react";
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import  { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import  { faArrowRight,faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import './cona.css'
+import Tippy from "@tippyjs/react";
+import 'tippy.js/dist/tippy.css';
 
 const Convertor_a = (props) => {
   const [ans, setans] = useState("");
@@ -50,14 +52,16 @@ const Convertor_a = (props) => {
           ></input>
         </div>
         <div>
-          <button onClick={clickhandler} className="btn_convert"><FontAwesomeIcon icon={faArrowRight} size="2x"/></button>
+          <button onClick={clickhandler} className="btn_convert_a"><FontAwesomeIcon icon={faArrowRight} size="2x"/></button>
         </div>
         <div className="output">{ans}</div>
       </div>
       <div className="btn__cancel">
+        <Tippy content="Clear">
         <button onClick={cancelhandler} className="btn_clear">
-          CLEAR
+          <FontAwesomeIcon icon={faTrashCan} size="2x"/>
         </button>
+        </Tippy>
       </div>
     </div>
   );
